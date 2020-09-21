@@ -1,8 +1,10 @@
 div {
+    width: 5%;
     height: 300px;
     color: black;
     border: solid black;
-    display: inline-block;
+    float: left;
+    display: flex;
     
     
 }
