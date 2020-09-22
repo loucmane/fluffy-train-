@@ -1,9 +1,13 @@
+body {
+    display: flex;
+}
+
 div {
     width: 10%;
     height: 300px;
     color: black;
     border: solid black;
-    float: left;
+    
     display: flex;
     
     

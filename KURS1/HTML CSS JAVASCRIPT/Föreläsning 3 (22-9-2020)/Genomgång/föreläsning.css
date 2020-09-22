@@ -1,0 +1,71 @@
+/*Selector
+*ID - # <- most specific selector
+*class - . more general selector
+*tagname - selects the elements with the tagname
+
+div.red <- targets all the divs with the class red 
+div .red <- targets all the child elements within the div with the class red
+
+
+em = Relative to the font-size of the element 2em means 2 times the size of the current font
+rem = Relative to font-size of the root element	
+
+positionering
+
+position: fixed
+top flyttar ner elemtet, bottom flyttar upp elementet, right flyttar elementet till vänster?, left flyttar elementet till höger?
+position: relative <- kan förflytta elementet, kommer ha sin normala position och vi kan förflytta den så som vi vill. ofta använd som
+behållare för andra element. Till exempel för att lägga absolut element inuti
+position: absolute <- absolute position 
+
+
+An element with position: absolute; is positioned relative to the nearest positioned ancestor instead of positioned relative to the viewport, like fixed).
+
+However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+
+Note: A "positioned" element is one whose position is anything except static.
+
+The flex property is a shorthand property for:
+
+flex-grow
+flex-shrink
+flex-basis
+The flex property sets the flexible length on flexible items.
+
+Note: If the element is not a flexible item, the flex property has no effect. 
+Flex is applied to the closest containing child element.
+If you have 10 divs you want to be flex you put the flex on the container element.
+
+IF YOU WANT A DIV TO BE A CIRCLE YOU USE A SQUARE AND GIVE IT A border-radius: 50%"
+IF YOU WANT A DIV TO BE OVAL YOU USE A RECTANGLE AND GVE IT A border-radius: 50%"
+
+flex
+
+display: flex;
+flex-direction: row;
+justify-content: space-evenly; /* space-around, space-between */
+
+
+
+
+
+
+
+
+.container  {
+display: flex;
+flex-direction: row;
+justify-content: space-between; /* space-around, space-between */
+
+}
+
+.container > div { 
+  height: 50px;
+  width: 50px; 
+  border: 1px solid black; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
