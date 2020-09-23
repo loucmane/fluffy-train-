@@ -15,9 +15,44 @@
             align-items adjusts content verticaly.
         </div>
         <div>how to use width and flex-grow </div>
-        <div>how do we use mediaqueries_</div>
-        <div>4</div>
-        <div>5</div>
+        <div>how do we use mediaqueries? How do breakpoints work? mobile first design? </div>
+        <div>mobile first > bigger device > bigger device, is best practice. </div>
+        <div>Responsitivitet
+
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+            * Undvik element med stora fasta bredder (t.ex. width: 600px)
+            * Undvik att använda viewports bredd för att sätta bredder.
+            * Använd mediaquery
+            
+            main.css
+            
+            /* Regler för telefoner */
+            .wrapper {
+              display: flex;
+              flex-direction: column;
+            }
+            
+            /* Regler för tablets */
+            @media screen and (min-width: 768px) {
+              .wrapper {
+                flex-direction: row;
+              }
+            }
+            
+            /* Regler för datorer */
+            @media screen and (min-width: 1024px) {
+              .wrapper {
+                width: 75%;
+              }
+            }
+            
+            
+            
+            
+            
+            
+            </div>
       </div>
 
 
