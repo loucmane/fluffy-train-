@@ -1,0 +1,24 @@
+@mixin box {
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 2px 3px 4px grey;
+}
+
+@mixin rotate {
+    /* om webkitm har implementerat transform kommer inte
+    -webkit- transform att hittas. Istället kommer transform att gälla */
+    -webkit-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+
+
+@mixin transform($property) {
+    -webkit-transform: ;
+    -ms-transform: ;
+    -o-transform: ;
+    -moz-transform: ;
+    transform: ;
+}

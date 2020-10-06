@@ -1,0 +1,41 @@
+ /*# = id 
+. = class
+html tag = element
+
+ID har högst prioritet för den är mest specifik
+Class har andra prio pga mer generell
+Html element är mest generell och lägst prio 
+
+
+Går att ha ett css dokument länkat till flera html dokument, tex för layout.
+Går att ha flera css dokument länkat till ett html dokument, längst ner har prio. 
+
+
+*/
+
+#firstname{
+
+    color: red;
+    height: 300px;
+    width: 300px;
+    /*border: 1px solid greenyellow; BORDER GÖR ATT ELEMENTET VÄXER OCH BLIR STÖRRE, KAN KNUFFA UNDAN ANDRA ELEMENT */
+    /*background-color: indigo; BÅDA DESSA ÄR BRA FÖR ATT HÅLLA KOLL PÅ SINA ELEMENT, DENNA GÖR INTE SÅ ATT DET VÄXER MEN KAN BLI RÖRIGT */ 
+}
+
+.big-p {
+margin: ;
+padding: ;
+/* Margin och padding kan upplevas som att det gör samma sak, de gör det inte
+    css ser alla element som boxar.
+    Padding läggs på innanför en potentiell ram(border) padding är mellanrum mellan elementet och border.
+    margin är utrymmet utanför ramen och mot andra element
+*/
+text-align: left, center, right;
+text-decoration: underline, line-through;
+text-transform: uppercase, lowercase, capitalize;
+
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 1rem; /* rem och em är mest flexibla gentemot fasta nummer eftersom dom är relativa(?) */
+}
+
+/* pseudo selector */
