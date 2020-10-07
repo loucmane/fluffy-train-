@@ -37,4 +37,8 @@
         @include box;
         @include transform(rotate(25deg));
     }
+
+    .info {
+        @extend
+    }
 }
