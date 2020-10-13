@@ -3,7 +3,7 @@ let sass = require('gulp-sass');
 let csso = require('gulp-csso');
 
 
-gulp.task('default', function(){
+gulp.task('scss-generic', function(){
     
     return gulp.src('scss/*.scss')
     .pipe(sass())
@@ -11,3 +11,15 @@ gulp.task('default', function(){
     .pipe(csso())
     .pipe(gulp.dest('dist'));
 });
+
+
+gulp.task('watch-scss', function()) {
+gulp.watch('scss/*.scss', gulp.series('scss-generic'));
+});
+
+
+gulp.task("default", gulp.series("scss-generic", "watch-scss"), function() {
+  
+});
+
+
