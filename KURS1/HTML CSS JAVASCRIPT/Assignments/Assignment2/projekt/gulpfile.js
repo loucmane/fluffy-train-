@@ -12,7 +12,7 @@ gulp.task('scss-generic', function () {
 });
 
 gulp.task('watch-scss', function () {
-  gulp.watch('scss/*.scss', gulp.series('scss-generic'));
+  gulp.watch('scss/**/*.scss', gulp.series('scss-generic'));
 });
 
 gulp.task('default', gulp.series('scss-generic', 'watch-scss'), function () {});

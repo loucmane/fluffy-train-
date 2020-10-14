@@ -1,21 +1,6 @@
-@import './variables/variables';
-@import './mixins/mixins';
+@import './base/base';
+@import './variables/colors';
+@import 'layout/header';
 @import './extends/extends';
-
-
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html {
-
-    @extend %font-size;
-}
-
-body {
-    box-sizing: border-box;
-}
+@import './mixins/mixins';
+@import './variables/variables';

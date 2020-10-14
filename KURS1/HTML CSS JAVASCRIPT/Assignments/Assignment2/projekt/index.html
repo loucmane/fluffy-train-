@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
     <!-- Top Navbar-->
-    <div class="wrapper">
-        <header class="main-header">
-            <nav>
-                <ul>
-                    <li></li> <!-- I sass nesta animation  med variable transform etc-->
-                    <li></li> <!-- https://codepen.io/loucmane/pen/ExyjeKZ?editors=1100-->
-                    <li></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
+    <div class="hero">
+      <header class="header__">
+        <nav role="navigation__wrapper">
+          <div id="menuToggle">
+            <!--
+              A fake / hidden checkbox is used as click reciever,
+              so you can use the :checked selector on it.
+              -->
+            <input class="hamburger__button" type="checkbox" />
 
-    <div>
+            <!--
+              Some spans to act as a hamburger.
+              
+              They are acting like a real hamburger,
+              not that McDonalds stuff.
+              -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!--
+              Too bad the menu has to be inside of the button
+              but hey, it's pure CSS magic.
+              -->
+            <ul id="menu">
+              <a href="#"><li>Home</li></a>
+              <a href="#"><li>About</li></a>
+              <a href="#"><li>Info</li></a>
+              <a href="#"><li>Contact</li></a>
+              <a href="https://erikterwan.com/" target="_blank"
+                ><li>Show me more</li></a
+              >
+            </ul>
+          </div>
+        </nav>
+
         <div class="text-box">
-            <h1 class="text-primary">
-              <span class="text-primary-main">Welcome to nature</span>
-              <span class="text-primary-sub1">A journey through time and sheep</span>
-              <span class="text-primary-sub2">To see how ...cotton ... is mage, made I mean...</span>
-            </h1>
+          <h1 class="heading-primary">
+            <span class="heading-primary--main">Welcome to nature</span>
+            <span class="heading-primary--sub1"
+              >A journey through time and sheep</span
+            >
+            <span class="heading-primary--sub2"
+              >To see how ...cotton ... is mage, made I mean...</span
+            >
+          </h1>
+        </div>
+      </header>
     </div>
-</body>
+  </body>
 </html>
