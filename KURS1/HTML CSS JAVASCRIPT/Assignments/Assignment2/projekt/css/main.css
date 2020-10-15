@@ -138,6 +138,7 @@ label a {
 
 .team__container {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 100%; }
   .team__container .team__member {
@@ -153,6 +154,7 @@ label a {
     height: 20rem;
     width: 80%;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     border: 1px solid black;
     border-radius: 1rem;
     position: relative;
@@ -163,7 +165,14 @@ label a {
       font-size: 3rem; }
   .team__container .about__button--wrapper {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    position: relative;
+    align-items: flex-end; }
+  .team__container .btn1 {
+    position: absolute;
+    bottom: 2rem;
+    font-size: 2rem;
+    border: none; }
   .team__container .about__button {
     color: #FFF;
     position: absolute;
@@ -171,4 +180,5 @@ label a {
     font-size: 2rem;
     border: none;
     cursor: pointer;
-    /* Mouse pointer on hover */ }
+    /* Mouse pointer on hover */
+    align-items: flex-end; }

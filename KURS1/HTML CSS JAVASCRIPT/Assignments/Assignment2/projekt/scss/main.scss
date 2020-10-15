@@ -177,6 +177,7 @@ label {
 
 .team__container {
     display: flex;
+    position: relative;
     flex-direction: column;
     // text-align: center;
     width: 100%;
@@ -198,6 +199,7 @@ label {
         height: 20rem;
         width: 80%;
         margin-top: 2rem;
+        margin-bottom: 2rem;
         border: 1px solid black;
         border-radius: 1rem;
         position: relative;
@@ -219,9 +221,17 @@ label {
 
 .about__button--wrapper {
     display: flex;
-    justify-content: center;
+   justify-content: center; 
+    position: relative;
+    align-items: flex-end;
 }
 
+.btn1 {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 2rem;
+  border: none; 
+}
 .about__button {  
     color: #FFF;
     position: absolute;
@@ -229,8 +239,10 @@ label {
     font-size: 2rem;
     border: none;
     cursor: pointer; /* Mouse pointer on hover */
+    align-items: flex-end;
+  
     
-    
+       
     }
 
 }
