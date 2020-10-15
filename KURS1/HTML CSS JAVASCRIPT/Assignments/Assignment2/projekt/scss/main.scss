@@ -2,5 +2,162 @@
 @import './variables/colors';
 @import 'layout/header';
 @import './extends/extends';
+<<<<<<< HEAD
 @import './mixins/mixins';
 @import './variables/variables';
+=======
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { 
+
+    @extend %font-size;
+}
+
+
+ 
+
+
+
+body {
+  font-family: "Cutive Mono", serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  background: #CCC;
+  overflow-x: hidden;
+}
+
+.hero__wrapper {
+    background-image: url("../img/negative-space-black-forest-dawn.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+
+.hero__button--wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    position: absolute;
+    bottom: 2rem;
+    font-size: 2rem;
+    border: none; 
+}
+
+.hero__button {
+color: #FFF;
+position: absolute;
+bottom: 2rem;
+font-size: 2rem;
+border: none;
+cursor: pointer; /* Mouse pointer on hover */
+
+
+}
+
+label {
+  .menu {
+    position: absolute;
+    right: -10rem;
+    top: -10rem;
+    z-index: 100;
+    width: 20rem;
+    height: 20rem;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 0;
+    transition: .5s ease-in-out;
+    box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+    cursor: pointer;
+  }
+  .hamburger {
+    position: absolute;
+    top: 13.5rem;
+    left: 5rem;
+    width: 3rem;
+    height: .2rem;
+    background: rgba(255, 255, 255, 0.808);
+    display: block;
+    transform-origin: center;
+    transition: .5s ease-in-out;
+    &:after,
+    &:before {
+      transition: .5s ease-in-out;
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgb(255, 255, 255);
+    }
+    &:before {
+      top: -1rem;
+    } 
+    &:after {
+      bottom: -1rem;
+    }
+  }
+  input {
+    display: none;
+  }
+  input:checked + .menu {
+      
+    border-radius: 0;
+    .hamburger {
+      transform: rotate(45deg);
+      &:after {
+        transform: rotate(90deg);
+        bottom: 0;
+      }
+      &:before {
+        transform: rotate(90deg);
+        top: 0;
+      }
+    }
+  }
+  
+  input:checked + .menu + ul {
+    opacity: 1;
+  }
+  
+  ul {
+    z-index: 200;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: .25s 0s ease-in-out;
+    display: column;
+  }
+  
+  a {
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+}
+
+.text-primary {
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  text-align: center;
+}
+>>>>>>> 24426990740fa1bc611614057ea43d180ed5cd34
