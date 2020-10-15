@@ -9,6 +9,9 @@ html {
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: "Cutive Mono", serif;
   font-size: 1.2rem;
@@ -121,3 +124,51 @@ label a {
   transform: translate(-50%, -50%);
   width: 80%;
   text-align: center; }
+
+.about__wrapper {
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid black; }
+  .about__wrapper .text-about {
+    font-weight: 200;
+    text-align: center;
+    border: 1px solid black; }
+
+.team__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  .team__container .team__member {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .team__container .team__member img {
+      size: 2rem;
+      border-radius: 50%;
+      width: 50%;
+      text-align: center; }
+  .team__container .team__member--description {
+    height: 20rem;
+    width: 80%;
+    margin-top: 2rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    position: relative;
+    justify-content: start; }
+    .team__container .team__member--description p {
+      font-size: 2rem; }
+    .team__container .team__member--description i {
+      font-size: 3rem; }
+  .team__container .about__button--wrapper {
+    display: flex;
+    justify-content: center; }
+  .team__container .about__button {
+    color: #FFF;
+    position: absolute;
+    bottom: 2rem;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    /* Mouse pointer on hover */ }
