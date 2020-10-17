@@ -1,6 +1,6 @@
 .row {
     max-width: $grid-width;
-    background-color: #eee;
+    
     margin: 0 auto;
     
 
@@ -13,7 +13,7 @@
 
     [class^="col-"] { // ^= starts with, *= contains word, $= ends with.
 
-        background-color: orange;
+        
         float: left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
