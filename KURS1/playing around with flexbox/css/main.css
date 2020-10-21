@@ -10,3 +10,30 @@ html {
 
 body {
   box-sizing: border-box; }
+
+.container {
+  border: solid orangered;
+  display: flex; }
+  .container__item {
+    width: 20rem;
+    margin: 1rem;
+    border: 3px solid #333333;
+    background-color: #dfdfdf; }
+    .container__item--1 {
+      min-height: 10rem;
+      flex-shrink: 0;
+      align-self: flex-end; }
+    .container__item--2 {
+      min-height: 20rem;
+      flex-grow: 2;
+      flex-basis: 0;
+      align-self: center; }
+    .container__item--3 {
+      min-height: 30rem;
+      flex-grow: 1; }
+
+.heroWrapper {
+  height: 100vh;
+  background-image: url("../img/negative-space-black-forest-dawn.jpg");
+  background-size: cover;
+  background-position: center; }
