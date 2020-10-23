@@ -3,6 +3,10 @@ window.onload = function () {
   let button = document.getElementById('jsButton');
   button.addEventListener('click', handleClick);
   
+  
+  let conditionalsButton = document.getElementById('conditionalsButton');
+  conditionalsButton.addEventListener('click', logicTest);
+
 };
 
 
@@ -23,8 +27,25 @@ function  handleClick() {
 
 }
 
+function logicTest() {
+  let numbersConditionalTest = document.getElementById('numbersConditionalTest');
+  let numbersConditionalInput = numbersConditionalTest.value;
+  let numbersConditionalTestResult = document.getElementById('numbersConditionalTestResult');
+  let result;
+ 
 
-
+  if (numbersConditionalInput > 100) {
+    result = "The number you have entered is greater than 100!";
+  } else {
+    if (numbersConditionalInput == 100) {
+      result = "The number you have entered is exactly 100!";
+    } else {
+      result = "The number you have entered is less than 100!";
+    }
+    
+  }
+  numbersConditionalTestResult.innerText = result;
+}
 
 
 
