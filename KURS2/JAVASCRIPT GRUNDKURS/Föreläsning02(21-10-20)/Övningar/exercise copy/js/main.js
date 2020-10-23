@@ -44,7 +44,7 @@ function logicTest() {
     }
     
   }
-  numbersConditionalTestResult.innerText = result;
+  numbersConditionalTestResult.innerText = result; // make sure this is not inside the last else statement brackets but inside the first ifs
 }
 
 
