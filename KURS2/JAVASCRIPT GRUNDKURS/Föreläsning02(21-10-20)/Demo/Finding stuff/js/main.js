@@ -20,7 +20,6 @@ window.onload = function () {
     let button = document.getElementById("lorem");
     button.addEventListener('click', changeColor);
 };
-
 function logicTest() {
   let x = 100;
 

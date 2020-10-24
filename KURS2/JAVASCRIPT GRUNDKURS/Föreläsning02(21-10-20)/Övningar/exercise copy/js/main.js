@@ -2,10 +2,22 @@ window.onload = function () {
 
   let button = document.getElementById('jsButton');
   button.addEventListener('click', handleClick);
+<<<<<<< HEAD
   
 };
+=======
+  
+  
+  let conditionalsButton = document.getElementById('conditionalsButton');
+  conditionalsButton.addEventListener('click', logicTest);
+>>>>>>> 825e1b00b9712c30052aaef73660bbcb4dc32f78
 
+};
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 825e1b00b9712c30052aaef73660bbcb4dc32f78
 function  handleClick() {
   
   let name = document.getElementById('name'); // variable  we call name gets the html id name and targets it
@@ -20,15 +32,42 @@ function  handleClick() {
   
   
   console.log('You pressed the button');
+<<<<<<< HEAD
 
+=======
+
+}
+
+function logicTest() {
+  let numbersConditionalTest = document.getElementById('numbersConditionalTest');
+  let numbersConditionalInput = numbersConditionalTest.value;
+  let numbersConditionalTestResult = document.getElementById('numbersConditionalTestResult');
+  let result;
+ 
+
+  if (numbersConditionalInput > 100) {
+    result = "The number you have entered is greater than 100!";
+  } else {
+    if (numbersConditionalInput == 100) {
+      result = "The number you have entered is exactly 100!";
+    } else {
+      result = "The number you have entered is less than 100!";
+    }
+    
+  }
+  numbersConditionalTestResult.innerText = result; // make sure this is not inside the last else statement brackets but inside the first ifs
+>>>>>>> 825e1b00b9712c30052aaef73660bbcb4dc32f78
 }
 
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 825e1b00b9712c30052aaef73660bbcb4dc32f78
 // function logicTest() {
 //   let x = 100;
 
