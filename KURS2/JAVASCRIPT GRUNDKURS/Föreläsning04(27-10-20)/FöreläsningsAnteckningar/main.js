@@ -108,6 +108,46 @@ for (let i = 0; i < persons[i].height; i++) {
 
 // objekt = pepparkaka, klass = pepparkaksform.
 
-class person {
-    
+class Person {
+    name;
+    age;
+
 }
+
+let myself = new Person();
+
+//nytt objekt med klassen Person
+
+myself.name = 'Loucmane';
+myself.age = 29;
+
+let wife = new Person();
+
+wife.name = 'new phone, who dis?';
+wife.age = 33;
+
+// () i klassen kallas för en constructor. den finns i alla klasser, 
+// om man inte definerar den syns den inte men den är alltid där
+
+/* 
+ class Person {
+     constructor(name, age, height) {
+        this.name = name;
+        this.age = age;
+        this.height = height;
+     }
+ }
+ let  myself = new Person(0,0,0)
+*/
+
+
+
+
+let person = {
+    name: 'Loucmane',
+    age: 29;
+};
+
+console.log(person)
+
+//skapa en klass som symboliserar saken du vill presentera, skapa objekt med klass som mall. tex produkter.
