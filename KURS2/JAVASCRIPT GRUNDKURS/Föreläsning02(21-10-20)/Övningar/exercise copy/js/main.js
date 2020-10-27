@@ -47,6 +47,23 @@ function logicTest() {
 }
 
 
+function senpai() {
+  let ezikiel = '';
+
+  if (ezikiel = 'senpai') {
+    console.log('big time, we are going on an adventure zoomin, just like the olden days')
+  } else if (ezekiel = 'new phone who dis') {
+    console.log('abonnenten du försöker nå kan inte nås för tillfället, men du kan skicka ett sms med ditt telefonnummer...')
+  } else if {ezekiel = 'too busy but I might know a guy'
+    console.log('I appreciate every bit of guidance and help I can get')
+  } else {
+    console.log('Let me know my bro, walk and talk, fika, whatever you feel!')
+  }
+
+}
+
+
+
 
 
 // function logicTest() {

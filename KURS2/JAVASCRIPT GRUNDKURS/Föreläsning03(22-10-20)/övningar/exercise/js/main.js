@@ -42,8 +42,9 @@ for (let i = 0; i < animals.length; i++) { //loops through the index of the arra
 
    let animalListItem = document.createElement('li'); //creates a list item in html
    document.getElementById('animalList').appendChild(animalListItem) // targets the unordered list we just created and appends the listitem element we made earlier
-    //for the duration of the for loop
-    animalListItem.innerHTML = animals[i]; // makes it so the html of the list item is the index of the animals variable.
+   animalListItem.innerHTML = animals[i]; // makes it so the html of the list item is the index of the animals variable.
+   //all these steps are looped until the for loop is finished.
 }
+
 
 }
