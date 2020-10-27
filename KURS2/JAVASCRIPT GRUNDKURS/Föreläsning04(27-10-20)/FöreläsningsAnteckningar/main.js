@@ -81,3 +81,33 @@ let person = {
 //objekt används för att beskriva saker. Vad som helst. Det beror på vad man vill visa på sin sida.
 //objekt används hela tiden, överallt för typ allting.
 //
+
+let otherPerson = {
+    name: 'Who dis?',
+    age: 41,
+    height: 179,
+    eyecolor: 'iceblue'
+}
+
+
+let persons = [person, otherPerson];
+
+for (let i = 0; i < persons[i].height; i++) {
+    console.log(persons[i].height);
+    
+}
+
+
+// ofta vill vi skapa flera objekt som ser likadana ut, alltså har likadana egenskaper
+
+// för att få våra objekt att se likadana ut behöver vi en mall
+
+//en mall i programmering kallas klass (class)
+
+//klass är en mall som beskriver ett framtida objekt. Vi kan skapa en klass utan att ha objekt.
+
+// objekt = pepparkaka, klass = pepparkaksform.
+
+class person {
+    
+}

@@ -23,27 +23,26 @@ for (let i = 0; i < numbers.length; i++) {
 
 console.log(sum);
 
+
+
+
 let animalList = document.createElement('ul'); // creates an unordered list in HTML
-
-
-
-
-
-document.getElementById('animalContainer').appendChild(animalList) // gets our div and makes a child element inside that div in our case an unordered list
 animalList.id = 'animalList'; // gives the element we create an ID of animalList
 
 
 
- 
+document.getElementById('animalContainer').appendChild(animalList) // gets our div and makes a child element inside that div in our case an unordered list
+
+
 
 let animals = ['Katt', 'Hund', 'Fisk', 'Zebra'];
 
 for (let i = 0; i < animals.length; i++) { //loops through the index of the array and does the things below until last item.
-
-   let animalListItem = document.createElement('li'); //creates a list item in html
-   document.getElementById('animalList').appendChild(animalListItem) // targets the unordered list we just created and appends the listitem element we made earlier
-   animalListItem.innerHTML = animals[i]; // makes it so the html of the list item is the index of the animals variable.
-   //all these steps are looped until the for loop is finished.
+    let zooInHere = animals[i] //put the array index in a variable
+    let animalListItem = document.createElement('li'); //creates a list item in html for each time it loops
+    document.getElementById('animalList').appendChild(animalListItem) // targets the unordered list we just created and appends the listitem element we made earlier
+                                                                     //for the duration of the for loop
+    animalListItem.innerHTML = zooInHere; // makes it so the html of the list item is the index of the animals variable.
 }
 
 
