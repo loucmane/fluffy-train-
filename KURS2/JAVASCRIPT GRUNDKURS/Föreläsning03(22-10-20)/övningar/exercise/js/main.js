@@ -15,11 +15,11 @@ for (let i = 0; i < name.length; i++) {
 }
 
 let numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55] // an array with the fibonacci sequence
-var sum = 0; // starting value of sum is 0
+let sum = 0; // starting value of sum is 0
 for (let i = 0; i < numbers.length; i++) { 
     sum += numbers[i]; //sum = numbers?(what does += mean? I'm guessing we make the sum the index of numbers?)
     
-}
+} 
 
 console.log(sum);
 

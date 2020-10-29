@@ -26,7 +26,7 @@ for (let i = 0; i < meMyselfAndI.length; i++) { // here we make a for loop that 
 
 
 class Person { //here is the class of the object. Classes are like a template and objects are the ones using these templates to categorize their values. 
-               // its important that we follow the order properties of the values inside  the constructor. when we define our object 
+               // its important that we follow the order properties of the values inside  the constructor. when we define our object  
     constructor (name, age, height, eyecolor){
         this.name = name;
         this.age = age; 
