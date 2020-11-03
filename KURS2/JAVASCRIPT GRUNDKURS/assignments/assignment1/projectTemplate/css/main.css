@@ -47,11 +47,128 @@ body {
 .tasks__new-list {
   font-size: 1.5rem; }
 
+.button {
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  padding: 0;
+  font-size: 1.3rem;
+  margin-top: 2rem; }
+
+.tasks__button {
+  color: inherit; }
+
+.todo-list__button {
+  color: #3670c7; }
+
+.tasks__button,
+.todo-list__button {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-right: .5rem;
+  transition: opacity 200ms ease-in; }
+  .tasks__button:hover,
+  .todo-list__button:hover {
+    opacity: .2; }
+
+.button.delete {
+  opacity: 0.7;
+  font-size: 2rem; }
+  .button.delete:hover {
+    color: #632424; }
+
 .new {
   background-color: transparent;
   border: 0;
   color: inherit;
-  border-bottom: .1rem solid currentColor; }
+  border-bottom: .1rem solid currentColor;
+  outline: none;
+  margin-top: 2rem;
+  padding: 1rem; }
+  .new::placeholder {
+    opacity: .4; }
+
+.tasks__list-item {
+  cursor: pointer; }
+  .tasks__list-item:hover {
+    opacity: 0.6; }
+
+.todo-list {
+  background: #f4f4f4;
+  color: #333; }
+  .todo-list__header {
+    padding: 2rem;
+    background: #888888;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .todo-list__title {
+    margin: 0 1.5rem 0 0; }
+  .todo-list__task-counter {
+    margin: 0;
+    font-size: 1.4rem; }
+  .todo-list__body {
+    padding: 2rem;
+    position: relative; }
+    .todo-list__body [type="checkbox"] {
+      opacity: 0;
+      position: absolute; }
+    .todo-list__body__deleter {
+      display: flex;
+      justify-content: space-evenly;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -4rem; }
+  .todo-list__custom-checkbox {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 1.5rem;
+    cursor: pointer;
+    border: .2rem solid currentColor;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: transform 150ms ease-in-out; }
+  .todo-list__task {
+    position: relative; }
+    .todo-list__task:hover .todo-list__custom-checkbox,
+    .todo-list__task [type="checkbox"]:focus + label .todo-list__custom-checkbox {
+      transform: scale(1.2);
+      color: #3670c7; }
+    .todo-list__task [type="checkbox"]:checked + label .todo-list__custom-checkbox {
+      background: #3670c7;
+      border-color: #3670c7;
+      box-shadow: inset 0 0 0 .2rem white; }
+    .todo-list__task [type="checkbox"]:checked + label {
+      opacity: .5; }
+      .todo-list__task [type="checkbox"]:checked + label::after {
+        transform: scaleX(1);
+        transform-origin: left; }
+    .todo-list__task label {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 3rem; }
+      .todo-list__task label::after {
+        content: "";
+        position: absolute;
+        left: 4rem;
+        right: 0;
+        height: .3rem;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 250ms ease-in-out; }
+    .todo-list__task::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: -.5rem;
+      height: .2rem;
+      background: currentColor;
+      opacity: .2; }
 
 body {
   display: grid;

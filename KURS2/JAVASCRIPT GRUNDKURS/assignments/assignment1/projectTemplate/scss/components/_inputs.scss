@@ -3,5 +3,12 @@
     border: 0;
     color: inherit;
     border-bottom: .1rem solid currentColor;
+    outline: none;
+    margin-top: 2rem;
+    padding: 1rem;
+
+    &::placeholder {
+        opacity: .4;
+    }
     
 }

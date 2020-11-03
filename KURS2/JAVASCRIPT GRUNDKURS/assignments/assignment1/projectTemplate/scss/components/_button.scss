@@ -1,0 +1,37 @@
+.button {
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    padding: 0;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+}
+
+.tasks__button {
+    color: inherit;
+}
+
+.todo-list__button {
+    color: $clr-primary;
+}
+
+.tasks__button,
+.todo-list__button {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-right: .5rem;
+    transition: opacity 200ms ease-in;
+
+    &:hover {
+        opacity: .2;
+    }
+}
+
+.button.delete {
+      opacity: 0.7; 
+      font-size: 2rem; 
+
+      &:hover {
+          color: $clr-warning;
+      }
+}
