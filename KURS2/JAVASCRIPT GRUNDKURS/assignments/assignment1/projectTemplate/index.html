@@ -5,31 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
     <script defer src="./js/main.js"></script>
   </head>
   <body>
-    <h1 class="title">CORONA TODO</h1>
+    <h1 class="title">CORONA TODO</h1> 
 
     <div class="tasks">
       <h2 class="tasks__list-title">Handle this ASAP</h2>
-      <ul class="tasks__list" data-lists>
+      <ul class="tasks__list" data-tasks__lists>
         <!-- <li class="tasks__list-item tasks__list-item--active">Not procrastinating</li>
         <li class="tasks__list-item">Doing Schoolwork</li>
         <li class="tasks__list-item">Stop procrastinating seriousssssss</li> -->
       </ul>
 
-      <form action="">
-        <input 
-        type="text"
-        class="tasks__new-list new list"
-        placeholder="new list name"
-        aria-label="new list name"
+      <form action="" data-tasks__new-lists-form>
+        <input
+          type="text"
+          class="tasks__new-list new list"
+          data-tasks__new-lists-input
+          placeholder="new list name"
+          aria-label="new list name"
         />
-        <button class="tasks__button button list"
-        aria-label="create new list">+</button>
+        <button class="tasks__button button list" aria-label="create new list">
+          +
+        </button>
       </form>
-
     </div>
 
     <div class="todo-list">
@@ -40,65 +41,53 @@
       <div class="todo-list__body">
         <div class="todo-list__tasks">
           <div class="todo-list__task">
-            <input 
-              type="checkbox"
-              id="task-1"
-              />
-              <label for="task-1">
-                <span class="todo-list__custom-checkbox"></span>
-                Stop procrastinating.
-              </label>
+            <input type="checkbox" id="task-1" />
+            <label for="task-1">
+              <span class="todo-list__custom-checkbox"></span>
+              Stop procrastinating.
+            </label>
           </div>
           <!--Task one-->
           <div class="todo-list__task">
-            <input 
-              type="checkbox"
-              id="task-2"
-              />
-              <label for="task-2">
-                <span class="todo-list__custom-checkbox"></span>
-                But so much other stuff to do
-              </label>
+            <input type="checkbox" id="task-2" />
+            <label for="task-2"> 
+              <span class="todo-list__custom-checkbox"></span>
+              But so much other stuff to do
+            </label>
           </div>
           <!--Task two-->
           <div class="todo-list__task">
-            <input 
-              type="checkbox"
-              id="task-3"
-              />
-              <label for="task-3">
-                <span class="todo-list__custom-checkbox"></span>
-                Nobody actually cares, just do it.
-              </label>
+            <input type="checkbox" id="task-3" />
+            <label for="task-3">
+              <span class="todo-list__custom-checkbox"></span>
+              Nobody actually cares, just do it.
+            </label>
           </div>
           <!--Task three-->
         </div>
         <div class="todo-list__new-task-creator">
           <form action="">
-            <input 
-            type="text"
-            class="todo-list__new-task new task"
-            placeholder="new task name"
-            aria-label="new task name"
+            <input
+              type="text"
+              class="todo-list__new-task new task"
+              placeholder="new task name"
+              aria-label="new task name"
             />
-            <button class="todo-list__button button task"
-            aria-label="create new task">+</button>
+            <button
+              class="todo-list__button button task"
+              aria-label="create new task"
+            >
+              +
+            </button>
           </form>
-
         </div>
         <div class="todo-list__deleter">
           <button class="todo-list__deleter-button button delete">
-            Clear completed tasks</button>
-          <button class="button delete">
-            Delete list
+            Clear completed tasks
           </button>
+          <button class="button delete">Delete list</button>
         </div>
-
       </div>
-
-
     </div>
-
   </body>
 </html>
-  
