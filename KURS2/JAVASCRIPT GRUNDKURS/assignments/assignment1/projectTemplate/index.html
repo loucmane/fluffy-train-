@@ -14,16 +14,14 @@
     <div class="tasks">
       <h2 class="tasks__list-title">Handle this ASAP</h2>
       <ul class="tasks__list" data-tasks__lists>
-        <!-- <li class="tasks__list-item tasks__list-item--active">Not procrastinating</li>
-        <li class="tasks__list-item">Doing Schoolwork</li>
-        <li class="tasks__list-item">Stop procrastinating seriousssssss</li> -->
+       
       </ul>
 
-      <form action="" data-tasks__new-lists-form>
+      <form action="" data-tasks__new-lists-form> 
         <input
           type="text"
           class="tasks__new-list new list"
-          data-tasks__new-lists-input
+          data-tasks__new-lists-input 
           placeholder="new list name"
           aria-label="new list name"
         />
@@ -33,42 +31,18 @@
       </form>
     </div>
 
-    <div class="todo-list">
+    <div class="todo-list" data-list-display-container>
       <div class="todo-list__header">
-        <h2 class="todo-list__title">Not procrastinating</h2>
-        <p class="todo-list__task-counter">No tasks remaining</p>
+        <h2 class="todo-list__title" data-list-title>Not procrastinating</h2>
+        <p class="todo-list__task-counter" data-list-count>No tasks remaining</p>
       </div>
       <div class="todo-list__body">
-        <div class="todo-list__tasks">
-          <div class="todo-list__task">
-            <input type="checkbox" id="task-1" />
-            <label for="task-1">
-              <span class="todo-list__custom-checkbox"></span>
-              Stop procrastinating.
-            </label>
-          </div>
-          <!--Task one-->
-          <div class="todo-list__task">
-            <input type="checkbox" id="task-2" />
-            <label for="task-2"> 
-              <span class="todo-list__custom-checkbox"></span>
-              But so much other stuff to do
-            </label>
-          </div>
-          <!--Task two-->
-          <div class="todo-list__task">
-            <input type="checkbox" id="task-3" />
-            <label for="task-3">
-              <span class="todo-list__custom-checkbox"></span>
-              Nobody actually cares, just do it.
-            </label>
-          </div>
-          <!--Task three-->
-        </div>
+        <div class="todo-list__tasks" data-tasks>  </div>
         <div class="todo-list__new-task-creator">
-          <form action="">
+          <form action="" data-new-task-form>
             <input
               type="text"
+              data-new-task-input
               class="todo-list__new-task new task"
               placeholder="new task name"
               aria-label="new task name"
@@ -82,12 +56,21 @@
           </form>
         </div>
         <div class="todo-list__deleter">
-          <button class="todo-list__deleter-button button delete">
+          <button class="todo-list__deleter-button button delete" data-clear-complete-tasks-button>
             Clear completed tasks
           </button>
-          <button class="button delete">Delete list</button>
+          <button class="button delete" data-delete-list-button>Delete list</button>
         </div>
       </div>
     </div>
+    <template id="task-template">
+      <div class="todo-list__task">
+        <input type="checkbox"/>
+        <label >
+          <span class="todo-list__custom-checkbox"></span>
+      
+        </label>
+      </div>
+    </template>
   </body>
 </html>
