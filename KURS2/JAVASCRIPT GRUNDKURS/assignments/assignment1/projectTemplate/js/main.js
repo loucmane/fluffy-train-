@@ -3,8 +3,10 @@ window.onload = () => {
 
 
     
-    const taskListContainer =  document.querySelector('[data-tasks__lists]');
+    const taskListContainer =  document.querySelector('[data-tasks__lists]'); 
+    //targets UL in DOM containing the list of tasks
     const tasksNewListForm = document.querySelector('[data-tasks__new-lists-form]');
+    //targets form containing input for creating new lists
     const tasksNewListInput = document.querySelector('[data-tasks__new-lists-input]');
     const deleteListButton = document.querySelector('[data-delete-list-button]')
 
