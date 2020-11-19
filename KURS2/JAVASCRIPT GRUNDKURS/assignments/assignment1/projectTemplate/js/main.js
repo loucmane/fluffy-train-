@@ -8,17 +8,25 @@ window.onload = () => {
     const tasksNewListForm = document.querySelector('[data-tasks__new-lists-form]');
     //targets form containing input for creating new lists
     const tasksNewListInput = document.querySelector('[data-tasks__new-lists-input]');
+    //targets input for creating new lists
     const deleteListButton = document.querySelector('[data-delete-list-button]')
-
+    //targets button for deleting lists
     const listDisplayContainer = document.querySelector('[data-list-display-container]')
+    //targets the container with the current list selected and its containing tasks
     const listTitleElement = document.querySelector('[data-list-title]')
+    //targets the title of the list inside the display ccontainer
     const listCountElement = document.querySelector('[data-list-count]')
+    //targets the paragraph which is going to act as a counter for how many tasks inside the selected list you have left
     const tasksContainer = document.querySelector('[data-tasks]')
+    //targets an empty div where the tasks will be displayed
     const taskTemplate = document.getElementById('task-template')
+    //targets the template task at the bottom of the html document
     const newTaskForm = document.querySelector('[data-new-task-form]')
+    //targets the form which contains the input and button for creating a new task
     const newTaskInput = document.querySelector('[data-new-task-input]')
+    //targets the input inside of the form where a new task is created.
     const clearCompleteTasksButton = document.querySelector('[data-clear-complete-tasks-button]')
-
+    //targets the button 
 
 
     
