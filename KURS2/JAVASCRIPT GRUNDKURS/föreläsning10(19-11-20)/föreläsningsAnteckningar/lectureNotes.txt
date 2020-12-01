@@ -1,0 +1,11 @@
+promises and callbacks
+
+then() is a callback function? 
+
+promises can "succeed" or "fail" 
+
+resolve or rejects?
+
+resolve and reject are built in javascript(?)
+
+.then() 
