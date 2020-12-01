@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <h1 class="title">CORONA TODO</h1> 
+
+    <div class="tasks">
+      <h2 class="tasks__list-title">Handle this ASAP</h2>
+      <ul class="tasks__list" data-tasks__lists>
+       
+      </ul>
+
+      <form action="" data-tasks__new-lists-form> 
+        <input
+          type="text"
+          class="tasks__new-list new list"
+          data-tasks__new-lists-input 
+          placeholder="new list name"
+          aria-label="new list name"
+        />
+        <button class="tasks__button button list" aria-label="create new list">
+          +
+        </button>
+      </form>
+    </div>
+
+    <div class="todo-list" data-list-display-container>
+      <div class="todo-list__header">
+        <h2 class="todo-list__title" data-list-title>Not procrastinating</h2>
+        <p class="todo-list__task-counter" data-list-count>No tasks remaining</p>
+      </div>
+      <div class="todo-list__body">
+        <div class="todo-list__tasks" data-tasks>  </div>
+        <div class="todo-list__new-task-creator">
+          <form action="" data-new-task-form>
+            <input
+              type="text"
+              data-new-task-input
+              class="todo-list__new-task new task"
+              placeholder="new task name"
+              aria-label="new task name"
+            />
+            <button
+              class="todo-list__button button task"
+              aria-label="create new task"
+            >
+              +
+            </button>
+          </form>
+        </div>
+        <div class="todo-list__deleter">
+          <button class="todo-list__deleter-button button delete" data-clear-complete-tasks-button>
+            Clear completed tasks
+          </button>
+          <button class="button delete" data-delete-list-button>Delete list</button>
+        </div>
+      </div>
+    </div>
+    <template id="task-template">
+      <div class="todo-list__task">
+        <input type="checkbox"/>
+        <label >
+          <span class="todo-list__custom-checkbox"></span>
+      
+        </label>
+      </div>
+    </template>
+  </body>
+</html>
