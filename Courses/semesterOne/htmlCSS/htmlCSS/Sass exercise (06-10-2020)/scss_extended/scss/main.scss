@@ -1,0 +1,10 @@
+@import 'variables';
+
+#wrapper {
+    margin: 20px;
+
+    .information {
+        padding: 20px;
+        background-color: $bg-color;
+    }
+}

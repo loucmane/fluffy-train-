@@ -1,0 +1,33 @@
+best practices
+
+how do you name variables, functions, classes etc. good to be overlyspecific.
+Keep the same structure.
+
+What does the variable do? "number" is better than "n".
+
+What are you going to do with the number?
+
+let n = 10;
+let number = 10;
+let numberToMultiply = 10;
+
+console.log(n*10)
+console.log(number*10)
+console.log(numberToMultiply*10)
+
+if you are specific with your naming conventions you don't have to use a lot of comments
+The code already explains what it does. It is important to keep the code managable and modular.
+Clean code.
+
+
+Refactoring
+
+Do it again, do it right.
+
+Code it, step back, clean it.
+
+Improve code in iterations?
+
+
+I've done this feature and it works but it might not follow best practice and i know i can do better. Its not going to work on safari v12. 
+^^^^^---- when you are aware of this is called tech debt. Code rot, the code you were supposed to fix but never did.

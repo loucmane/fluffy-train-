@@ -1,0 +1,22 @@
+
+
+body {
+    display: grid;
+    grid: 
+    'header header header header' auto 
+    '...... lists active ......' auto /
+    1fr minmax(10rem, 30rem) minmax(25rem, 50rem) 1fr; 
+
+}
+
+.title {
+    grid-area: header;
+}
+
+.tasks {
+    grid-area: lists;
+}
+
+.todo-list {
+    grid-area: active;
+}
