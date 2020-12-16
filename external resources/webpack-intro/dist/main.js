@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("these are some fruit modules im accessing through index.js while learning webpack"),console.log(),console.log("This is a mango"),console.log("This is a peach")})();
