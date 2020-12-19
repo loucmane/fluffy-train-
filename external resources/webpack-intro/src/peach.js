@@ -1,0 +1,1 @@
+export const peach = "This is a peach"

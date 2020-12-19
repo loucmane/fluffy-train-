@@ -1,0 +1,1 @@
+export const mango = "This is a mango"
