@@ -1,14 +1,5 @@
-@mixin clearfix {
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
 
-@mixin absCenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
+//media queries
+//good way, use the most popular widths as breakpoints.
+//perfect way, use responsive measurements and add queries when design breaks while stretching resolution

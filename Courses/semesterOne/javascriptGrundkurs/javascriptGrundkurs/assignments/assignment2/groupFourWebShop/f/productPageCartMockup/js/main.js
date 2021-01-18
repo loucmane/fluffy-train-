@@ -1,10 +1,3 @@
-//Jag har försökt kommentera så gott det går.
-//Vissa saker är mental notes och allt är på engelska för att det är lite så jag rullar när jag antecknar.
-//Jag vet inte riktigt hur deep jag ska försöka gå. Men gör mitt bästa för att förstå.
-//Egentligen ville jag att vi gjorde det här tillsammans. 
-//Nu ska jag sluta babbla och get down to business, enjoy the ride... 
-
-
 
 //targets elements with the class add-cart, could use jQuery and do let carts = $('.add-cart') when we do the actual project.
 let  carts = document.querySelectorAll('.add-cart'); 
@@ -50,8 +43,8 @@ for (let i=0; i < carts.length; i++) {
 
         //console.log('X item(s) has been added to cart') type functionality is what we want.
         //console.log(Total cost is : x SEK) type functionality is what we want.
-        cartNumbers(products[i]);
-        totalCost(products[i])
+        cartNumbers(products[i]); //this function will pass the parameter of the products[i] on the button we click. we grab it and call it product
+        totalCost(products[i])//this function will pass the parameter of the products[i] on the button we click. we grab it and call it product
     })
 }
 
@@ -74,7 +67,7 @@ function onLoadCartNumbers() {
 //this function is gonna check how many items we have in our cart.
 //here we use localStorage key and values to remember how many items we have
 //localStorage can only hold strings.
-function cartNumbers(product) {
+function cartNumbers(product) { // grabs the product from the for loop when we click the button, is also passing it to the setItems function below
     //Variable that Checks localStorage if there are any items in the cart.
     let productNumbers = localStorage.getItem('cartNumbers'); 
     //these console logs are to show what we get from localStorage, remove them.
@@ -82,47 +75,63 @@ function cartNumbers(product) {
     //parses the string from localStorage and converts it into  a number.
     productNumbers = parseInt(productNumbers); 
     console.log(typeof productNumbers); //what the parseInt() did.
-    if( productNumbers ) {
+    if( productNumbers ) { //if productNumbers exists in localStorage do this:
+        // make the localStorage key cartNumbers, give it a value of productNumbers and then + 1
         localStorage.setItem('cartNumbers', productNumbers + 1); // 
+        //target the span element within element with .cart class, in this case the span with  a number we change
         document.querySelector('.cart span').textContent = productNumbers + 1;
-    } else {
+    } else { //otherwise do this:
+
+        //create localStorage Key and give it the value of 1.
         localStorage.setItem('cartNumbers', 1);
+        // target the span element within element with .cart class, in this case the span with  a number we change using .textContent
         document.querySelector('.cart span').textContent = 1;
     }
     
-    setItems(product);
+    setItems(product); //grabs the product parameter from the cartNumbers function.
 }
 
 
-function setItems(product) {
-    let cartItems = localStorage.getItem('productsInCart');
-    cartItems = JSON.parse(cartItems);
+function setItems(product) { // the products[i] that gets passed around like a hot potato.
+    console.log('This is inside the setItems function');
+    console.log('This is the product I clicked', product)   
+    let cartItems = localStorage.getItem('productsInCart'); //cartItems is the value of the key productsInCart in localStorage.
     
-    if(cartItems != null ){
+    if(cartItems != null ){ //this if checks if there are items in the localStorage already, the != operator means "is different than", so if cartItems is different than null do this:
 
-        if(cartItems[product.tag] == undefined ) {
+        if(cartItems[product.tag] == undefined ) { //this if checks if you click another object or not. 
+            //If you do, this will spread the old objects properties and the new objects properties into one object with the combined properties
             cartItems = {
                 //spread operator... array/object literals? ES2015 feature.
-                //look into object/array destructuring(?) 
+                //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
                 //takes a property from an existing object or multiple existing objects and combine them into one object.
                 /* 
                 let obj = {
-                    a:1,
-                    b:'Test'
+                    A:1,
+                    B:'2'
                 }
                 let objExpanded = {
                     ...obj,
-                    c:'Newproperty'
+                    A:'3'
+                    B: '4'
                 }
-                console.log(objExpanded); = {a: 1, b: 'Test'}
+
+                let objExpandedAgain = {
+                    ...objExpanded,
+                    e: '5'
+                }
+                console.log(objExpanded); = {a: 1, b: 2, c: 3, e: }
+                console.log(objExpandedAgain)
                 */
                 ...cartItems,
+                
                 [product.tag]: product  
             }
         }
+        //cartItems['theTagOfTheProductClicked'] += increase the value by 1
         cartItems[product.tag].inCart += 1;
     } else {
-        product.inCart = 1;
+        product.inCart = 1; // make product.inCart 1
         cartItems = {
             [product.tag]: product
         }
@@ -130,7 +139,7 @@ function setItems(product) {
 
     
     
-    localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+    localStorage.setItem('productsInCart', JSON.stringify(cartItems)); //creates a key with the name productsInCart, productsInCart will have the value cartItems thats been converted to a string using JSON.stringify(sinceLocalStorageOnlyHoldsStrings)
 }
 
 function totalCost(product) {
@@ -157,7 +166,7 @@ function displayCart() {
         productContainer.innerHTML = '';
         Object.values(cartItems).map( (item, index) => {
             productContainer.innerHTML += `
-            <div class="product"><ion-icon name="close-circle"></ion-icon><img src="../images/${item.tag}.jpg" />
+            <div class="product"><ion-icon name="close-circle"></ion-icon><img src="../images/${item.tag}.jpg" /> 
                 <span class="sm-hide">${item.name}</span>
             </div>
             <div class="price sm-hide">${item.price} SEK</div>
@@ -166,7 +175,7 @@ function displayCart() {
                     <span>${item.inCart}</span>
                 <ion-icon class="increase" name="add-circle-outline"></ion-icon>   
             </div>
-            <div class="total">${item.inCart * item.price},00 SEK</div>
+            <div class="total">${item.inCart * item.price},00 SEK</div> 
             `;
         });
             
