@@ -1,0 +1,50 @@
+.about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 4rem;
+        margin: 2rem 0;
+    }
+
+    &__team {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+        
+        p {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        img {
+            width: 30rem;
+            border-radius: 50%;
+            margin: 2rem 0;
+            box-shadow: 0 0 2rem 1rem rgba(56, 56, 56, 0.5);;
+        }
+
+        div {
+            background-color: lightgray;
+            padding: 3rem;
+            width: 80vw;
+            border-radius: 1rem;
+
+            i{
+                font-size: 2rem;
+            }
+        }
+
+    }
+
+
+    
+
+    &__button,&__button::before, &__button::after {
+        background-color: #000;
+    }
+}
