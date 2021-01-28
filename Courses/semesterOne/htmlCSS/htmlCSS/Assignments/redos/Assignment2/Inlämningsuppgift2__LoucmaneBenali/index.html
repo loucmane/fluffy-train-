@@ -18,37 +18,20 @@
 	<body>
 		<!-- 3 behållare, flex-direction: column
     Hero, About, Footer -->
-
+ 
 		<div id="home" class="hero">
-			<!-- <input class="hamburger 
-      " type="checkbox">
-				<span class="hamburger-box">
-					<span class="hamburger-inner"></span>
-				</span>
-      </input> -->
-
-			<!-- <span class="checkbox-container">
-        <input class="checkbox-trigger" type="checkbox"  />
-        <span class="menu-content">
-          <ul class="navbar">
-            <li class="navbar__item">
-              <a href="#home">Hem</a>
-            </li>
-            <li class="navbar__item">
-              <a href="#about">Om</a>
-            </li >
-            <li class="navbar__item">
-              <a href="#contact">Kontakt</a>
-            </li>
-          </ul> 
-          <span class="hamburger-menu"></span>
-        </span>
-      </span> -->
-
-			<span class="checkbox-container">
-				<input type="checkbox" />
-				<span class="checkbox-custom"></span>
-			</span>
+			<div class="navbar">
+				<header class="header">
+					
+					<input class="menu-btn" type="checkbox" id="menu-btn" />
+					<label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+					<ul class="menu">
+						<li><a href="#home">Hem</a></li>
+						<li><a href="#about">Om</a></li>
+						<li><a href="#contact">Kontakt</a></li>
+					</ul>
+				</header>
+			</div>
 
 			<section class="hero__text">
 				<h1 class="hero__heading">Welcome to nature</h1>
@@ -63,9 +46,11 @@
 			></a>
 		</div>
 
-		<div id="about__container" class="about__container">
-			<h1>Träffa Laget</h1>
-			<div class="about">
+		
+			<div class="about__heading">
+				<h1>Träffa Laget</h1>
+			</div>
+			<div id="about" class="about">
 				<!--	<div class="team"> -->
 				<div class="about__team">
 					<p>Rakib</p>
@@ -114,13 +99,13 @@
 					</div>
 				</div>
 				<!--</div> -->
-				<a href="#footer" class="footer__button btn"
-					><i class="fas fa-arrow-alt-circle-down icon"></i
+				<a href="#contact" id="about__button "
+					><i id ="blackIcon"class="fas fa-arrow-alt-circle-down icon about__button"></i
 				></a>
 			</div>
-		</div>
+		
 
-		<footer id="footer" class="footer">
+		<footer id="contact" class="footer">
 			<div class="footer__contact">
 				<p>Tegel Consulting AB</p>
 				<p>Agatvägen 18</p>

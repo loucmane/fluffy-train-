@@ -4,9 +4,14 @@
     flex-direction: column;
     align-items: center;
 
-    h1 {
-        font-size: 4rem;
-        margin: 2rem 0;
+    &__heading {
+        display : flex;
+        justify-content: center;
+        h1 {
+            font-size: 4rem;
+            margin: 2rem 0;
+        }
+
     }
 
     &__team {
@@ -44,9 +49,7 @@
 
     
 
-    &__button,&__button::before, &__button::after {
-        background-color: #000;
-    }
+  
 
     @media only screen and (min-width: 768px) { 
             flex-direction: row;
@@ -61,6 +64,27 @@
                         width: 80%;
                 }
             }
-            
+
     }
+}
+
+#about__button {
+
+    padding-left: 0%;
+    
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+     
+    
+
+}
+
+#blackIcon {
+    font-size: 3rem;
+    color: #000;
+    padding-bottom: 3rem;
 }

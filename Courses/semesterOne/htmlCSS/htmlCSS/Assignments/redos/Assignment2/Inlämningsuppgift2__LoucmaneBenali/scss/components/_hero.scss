@@ -11,7 +11,7 @@
   } 
 
   .hamburgerMenu {
-    padding-right: 1.4rem;
+    //padding-right: 1.4rem;
     position: absolute;
     top: 0;
     width: 100%;
@@ -26,8 +26,10 @@
   }
 
  .hero__text {
+   
    height: 100vh;
    display: flex;
+   padding-left: 15%;
    flex-direction: column;
    justify-content: center;
    align-items: center;
@@ -50,7 +52,8 @@
  }
 
  .hero__button {
-   font-size: 5rem;
+   padding-left: 0%;
+   font-size: 3rem;
    color: #fff;
    position: absolute;
    bottom: 3rem;
