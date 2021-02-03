@@ -1,1 +1,1 @@
-export const mango = "This is a mango"
+export const mango = "This is a mango from mango.js"

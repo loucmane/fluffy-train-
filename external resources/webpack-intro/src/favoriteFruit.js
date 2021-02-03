@@ -1,3 +1,1 @@
-export const favoriteFruit = => () {
-    
-}
+export const favoriteFruit = 'my favoriteFruit is a pango from favoriteFruit.js'

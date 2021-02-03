@@ -1,1 +1,1 @@
-export const peach = "This is a peach"
+export const peach = "This is a peach from peach.js" 
