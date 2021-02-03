@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .about {
     display: flex;
     justify-content: center;
@@ -63,4 +64,95 @@
             }
             
     }
+=======
+.about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    &__heading {
+        display : flex;
+        justify-content: center;
+        h1 {
+            font-size: 4rem;
+            margin: 2rem 0;
+        }
+
+    }
+
+    &__team {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+        
+        p {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        img {
+            width: 30rem;
+            border-radius: 50%;
+            margin: 2rem 0;
+            box-shadow: 0 0 2rem 1rem rgba(56, 56, 56, 0.5);;
+        }
+
+        div {
+            background-color: lightgray;
+            padding: 3rem;
+            width: 80vw;
+            border-radius: 1rem;
+
+            i{
+                font-size: 2rem;
+            }
+        }
+
+    }
+
+
+    
+
+  
+
+    @media only screen and (min-width: 768px) { 
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            &__team {
+                width: 40vw;
+                flex-grow: 0;
+                flex-shrink: 0;
+                flex-basis: 50%;
+                    div {
+                        width: 80%;
+                }
+            }
+
+    }
+}
+
+#about__button {
+
+    padding-left: 0%;
+    
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+     
+    
+
+}
+
+#blackIcon {
+    font-size: 3rem;
+    color: #000;
+    padding-bottom: 3rem;
+>>>>>>> 23fcd5ae73efb4dcfd9918b8edf1fc783cf8a191
 }

@@ -1,0 +1,56 @@
+trigger: none
+pr:
+  branches:
+    include:
+      - master
+
+parameters:
+  - name: static
+    displayName: Generate Static Fonts
+    type: boolean
+    default: true
+
+variables:
+  - name: runCodesignValidationInjectionBG
+    value: false
+
+jobs:
+  - job: build
+    displayName: Build Font
+    pool:
+      vmImage: macOS-latest
+    steps:
+      - task: UsePythonVersion@0
+        displayName: 'Use Python 3.x'
+
+      - bash: |
+         brew install ttfautohint
+         pip install -r requirements.txt ufolint
+        displayName: 'Install build dependencies'
+
+      - bash: |
+         ufolint sources/*.ufo
+        displayName: 'Lint sources'
+
+      - ${{ if eq(parameters.static, true) }}:
+        - bash: |
+           python ./build.py -S -W
+          displayName: 'Build variable + static fonts'
+
+      - ${{ if eq(parameters.static, false) }}:
+        - bash: |
+           python ./build.py -W
+          displayName: 'Build variable fonts only'
+
+      - bash: |
+         mkdir -p out
+         cd build
+         zip -r ../out/CascadiaCode.zip ttf otf woff2
+        displayName: 'Archive all fonts'
+
+      - task: PublishPipelineArtifact@1
+        displayName: 'Publish archive'
+        inputs:
+          targetPath: out
+          artifact: 'archive'
+
