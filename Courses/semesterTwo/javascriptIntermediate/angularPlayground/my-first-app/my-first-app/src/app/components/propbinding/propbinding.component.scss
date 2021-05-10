@@ -1,0 +1,25 @@
+.image-container {
+  width: 25%;
+  border: 1px solid red;
+  display: flex;
+}
+
+img.small {
+  max-width: 25%;
+}
+
+img.big {
+  max-width: 100%;
+}
+
+.blueBox {
+  height: 500px;
+  width: 500px;
+  border: 1px solid blue;
+}
+
+.greenBox {
+  height: 500px;
+  width: 500px;
+  border: 1px solid green;
+}

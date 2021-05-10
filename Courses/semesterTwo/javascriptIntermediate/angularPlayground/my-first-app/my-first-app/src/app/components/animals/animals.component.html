@@ -1,0 +1,18 @@
+<p>animals works!</p>
+
+<ul>
+  <li *ngFor="let a of animals">
+    {{ a | json }}
+  </li>
+</ul>
+
+<p *ngIf="isShowing">hello</p>
+<!-- will display hello if isShowing is true. If -->
+<p [hidden]="!isShowing"></p>
+
+<div>
+  <ul *ngFor="let a of animals">
+    <li *ngIf="!a.isFed">{{ a.breed }}</li>
+    <!-- if its not fed, show the breed-->
+  </ul>
+</div>
